@@ -113,12 +113,14 @@ ul.todo-list {
 	color: #fff;
 }
 
-.unvisible {
-	display: none;
+.weather-info {
+	position: absolute;
+	top: 20px;
+	right: 30px;
 }
 
-.clicked {
-	color: #7f8c8d;
+.unvisible {
+	display: none;
 }
 
 button {
