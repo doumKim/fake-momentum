@@ -1,4 +1,4 @@
-(() => {
+const makeClock = () => {
 	const clockContainer = document.querySelector('.js-clock');
 	const clockTitle = clockContainer.querySelector('h1.clock-title');
 
@@ -27,4 +27,6 @@
 	};
 
 	init();
-})();
+};
+
+export default makeClock;

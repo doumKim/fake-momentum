@@ -1,6 +1,6 @@
-(() => {
-	const TodoForm = document.querySelector('.todo-form');
-	const inputName = TodoForm.querySelector('.input-user-name');
+const makeGreetingTitle = () => {
+	const usernameForm = document.querySelector('.username-form');
+	const inputName = usernameForm.querySelector('.input-user-name');
 	const greetingText = document.querySelector('.greeting-title');
 
 	const USER_LS = 'currentUser';
@@ -19,12 +19,12 @@
 	};
 
 	const getUserName = () => {
-		TodoForm.classList.remove(UNVISIBLE_CN);
-		TodoForm.addEventListener('submit', handleSubmit);
+		usernameForm.classList.remove(UNVISIBLE_CN);
+		usernameForm.addEventListener('submit', handleSubmit);
 	};
 
 	const makeGreetingText = (text) => {
-		TodoForm.classList.add(UNVISIBLE_CN);
+		usernameForm.classList.add(UNVISIBLE_CN);
 		greetingText.classList.remove(UNVISIBLE_CN);
 		greetingText.textContent = `Hello ${text}`;
 	};
@@ -39,4 +39,6 @@
 	};
 
 	init();
-})();
+};
+
+export default makeGreetingTitle;
