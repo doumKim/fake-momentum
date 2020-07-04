@@ -13,7 +13,7 @@ const changeBackground = () => {
 	};
 
 	const backgroundFadeIn = () => {
-		setTimeout(() => backgroundElement.classList.add('fade-in'), 300);
+		setTimeout(() => backgroundElement.classList.add('fade-in'), 200);
 	};
 
 	const init = () => {

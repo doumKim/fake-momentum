@@ -12,4 +12,4 @@ const init = () => {
 	makeWeatherInfo();
 };
 
-init();
+window.addEventListener('load', init());
