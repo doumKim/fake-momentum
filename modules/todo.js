@@ -11,7 +11,7 @@ const makeTodoList = () => {
 	};
 
 	const deleteTodoItem = (e) => {
-		const ItemWillBeDeleted = e.target.parentElement;
+		const ItemWillBeDeleted = e.target.parentElement.parentElement;
 		TodoList.removeChild(ItemWillBeDeleted);
 		const filteredTodos = TODOS.filter((todo) => {
 			return todo.id !== parseInt(ItemWillBeDeleted.id);
@@ -41,7 +41,8 @@ const makeTodoList = () => {
 		const deleteItemButton = clone.querySelector('button');
 		TodoListItem.id = TODOS.length + 1;
 		spanItemText.textContent = text;
-		deleteItemButton.textContent = '🗑';
+		deleteItemButton.innerHTML =
+			'<i class="fas fa-trash-alt" alt="delete"></i>';
 		addDeleteFeature(deleteItemButton);
 		TodoList.appendChild(clone);
 		pushTodoItem(text);

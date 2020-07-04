@@ -23,10 +23,22 @@ const makeGreetingTitle = () => {
 		usernameForm.addEventListener('submit', handleSubmit);
 	};
 
+	const makeTimeGreetings = () => {
+		const now = new Date();
+		const hours = parseInt(now.getHours());
+		if (hours >= 6 && hours < 11) {
+			return 'Good morning!';
+		} else if (hours >= 11 && hours < 17) {
+			return 'Good afternoon!';
+		} else {
+			return 'Good evening!';
+		}
+	};
+
 	const makeGreetingText = (text) => {
 		usernameForm.classList.add(UNVISIBLE_CN);
 		greetingText.classList.remove(UNVISIBLE_CN);
-		greetingText.textContent = `Hello ${text}`;
+		greetingText.textContent = `${makeTimeGreetings()} ${text}.`;
 	};
 
 	const loadUserName = () => {
@@ -36,6 +48,7 @@ const makeGreetingTitle = () => {
 
 	const init = () => {
 		loadUserName();
+		makeTimeGreetings();
 	};
 
 	init();

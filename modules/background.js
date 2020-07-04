@@ -9,7 +9,6 @@ const changeBackground = () => {
 
 	const getRandomNumber = (amount) => {
 		const randomNumber = Math.floor(Math.random() * amount + 1);
-		console.log(randomNumber);
 		return randomNumber;
 	};
 
