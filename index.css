@@ -126,3 +126,33 @@ ul.todo-list {
 button {
 	cursor: pointer;
 }
+
+@media screen and (max-width: 460px) {
+	section.content {
+		width: 90%;
+	}
+
+	h1.clock-title {
+		font-size: 12.5vw;
+	}
+
+	h4.greeting-title {
+		font-size: 7.5vw;
+	}
+
+	section.content > form > input {
+		font-size: 15px;
+	}
+
+	.weather-info {
+		top: 10px;
+		right: 50%;
+		transform: translateX(50%);
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.weather-info {
+		font-size: 13px;
+	}
+}
