@@ -7,28 +7,37 @@
 		<title>Document</title>
 	</head>
 	<body>
-		<div class="js-clock">
-			<h1 class="clock-title">00:00:00</h1>
+		<div id="background"></div>
+		<div id="wrap">
+			<section class="content">
+				<div class="js-clock">
+					<h1 class="clock-title">00:00:00</h1>
+				</div>
+				<form class="username-form">
+					<input
+						class="input-user-name"
+						type="text"
+						placeholder="Write your name."
+						required
+					/>
+				</form>
+				<h4 class="greeting-title unvisible">123</h4>
+				<form class="todo-list-form">
+					<input
+						class="input-todo-item"
+						type="text"
+						placeholder="Write a to do."
+					/>
+				</form>
+				<ul class="todo-list"></ul>
+				<template class="todo-item-template">
+					<li class="todo-item">
+						<span></span>
+						<button></button>
+					</li>
+				</template>
+			</section>
 		</div>
-		<form class="username-form">
-			<input
-				class="input-user-name"
-				type="text"
-				placeholder="What is your name?"
-				required
-			/>
-		</form>
-		<h4 class="greeting-title unvisible">123</h4>
-		<form class="todo-list-form">
-			<input class="input-todo-item" type="text" placeholder="Write a to do." />
-		</form>
-		<ul class="todo-list"></ul>
-		<template class="todo-item-template">
-			<li class="todo-item">
-				<span></span>
-				<button></button>
-			</li>
-		</template>
 		<script type="module" src="./index.js"></script>
 	</body>
 </html>
